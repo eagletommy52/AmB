@@ -25,6 +25,11 @@
 .event ul {
   list-style-position: inside;
 }
+.event h3 {
+  font-family: Cinzel, Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
 .wedding, .reception, .accomodations, .directions{
  
   text-align: center;
