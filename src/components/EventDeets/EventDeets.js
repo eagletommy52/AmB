@@ -68,7 +68,7 @@ const EventDeets = (props) => {
             Reception
           </h3>
           <p>
-            Following the ceremony, the cocktail hour &<br /> reception will be held at the Thayer Hotel at 4:30pm.<br />
+            Following the ceremony, the cocktail hour & reception will be held at the Thayer Hotel at 4:30pm.<br />
             Thayer Hotel<br />
             674 Thayer Rd<br /> 
             West Point, NY 10996
@@ -80,13 +80,13 @@ const EventDeets = (props) => {
           <h3>
             Accommodations
           </h3>
-            <p>We have reserved a block under our names at<br/> the
+            <p>We have reserved a block under our names at the
             <a href="https://www.thethayerhotel.com"> Thayer Hotel</a> where the reception will be held.
             <br />
-            To reserve, call the Thayer at (845) 446-4731 <br/>
-            and ask reserve under the Daub/Thompson block.<br/>
-              There are also a number of other hotels, bed &<br /> breakfasts and airbnb rentals available in the<br/> area
-            so we would recommend looking at some<br /> of the following locations:
+            To reserve, call the Thayer at (845) 446-4731 
+            and ask reserve under the Daub/Thompson block.
+              There are also a number of other hotels, bed & breakfasts and airbnb rentals available in the area
+            so we would recommend looking at some of the following locations:
             </p>
             <ul>
                 <li>
@@ -109,12 +109,12 @@ const EventDeets = (props) => {
             Getting There
           </h3>
           <p> 
-          Guest traveling from out of town will likely want<br/> to fly into one of the following airports:<br/><br/>
+          Guest traveling from out of town will likely want to fly into one of the following airports:<br/><br/>
           <div class="airportContainer">
             {airportList.map(airport=><Airport Name={airport.Name} Abbr={airport.Abbr} Cost={airport.Cost} Time={airport.Time}/>)}
           </div>
           <br/>
-          From there most guests will rent a car, but the metro<br/> north train line can take visitors from<br/> the Manhattan to Garrison, the town<br/> directly across the Hudson from West Point.
+          From there most guests will rent a car, but the metro north train line can take visitors from the Manhattan to Garrison, the town directly across the Hudson from West Point.
           </p>
         </div>
       </div>

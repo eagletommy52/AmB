@@ -4,25 +4,33 @@ import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faAmazon } from '@fortawesome/free-brands-svg-icons'
+
 import Nav from './components/Nav/Nav';
 import EventDeets from './components/EventDeets/EventDeets'
 import Party from './components/Party/Party';
+
 const Sticky = require('sticky-js');
 const sticky = new Sticky('.backToTop');
 
 
-library.add(fab, faAngleDoubleUp)
+library.add(faAmazon, faAngleDoubleUp)
 
 
 configureAnchors({scrollDuration: 600})
 
 class App extends Component {
   render() {
+    const heroBackground = {
+      height: "1000px",
+      backgroundImage: 'url(http://tinyurl.com/zaz7bp4)'}
     return (
       <div className="App">
         <div className="hero" style={{"height": "100vh"}}>
-        <Nav />
+        
+          <Nav />
+        
+        
         
       </div>
       

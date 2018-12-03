@@ -22,6 +22,9 @@
   max-width: 20vw;
   max-height: 25vh
 }
+.event p {
+  max-width: 25rem;
+}
 .event ul {
   list-style-position: inside;
 }
@@ -30,9 +33,13 @@
   font-size: 1.75rem;
   font-weight: 600;
 }
-.wedding, .reception, .accomodations, .directions{
- 
+.wedding, .reception, .accommodations, .directions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  width: 100%
 }
 
 .wedding {
@@ -44,6 +51,7 @@
 .accommodations {
   grid-area: c;
   text-align: center;
+  
 }
 .accommodations ul {
   text-align: initial;
@@ -53,10 +61,10 @@
   grid-area: d;
 }
 .airport{
- border: 1px solid #666;
- width: 8rem;
- border-radius: 5px;
- padding: 5px;
+  border: 1px solid #666;
+  width: 8rem;
+  border-radius: 5px;
+  padding: 5px;
 }
 .airport h4{
   margin: 8px;

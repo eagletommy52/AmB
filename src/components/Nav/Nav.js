@@ -1,7 +1,7 @@
 import React from 'react';
 import './Nav.css';
 import ScrollableAnchor, { configureAnchors, goToTop } from 'react-scrollable-anchor';
-import { slide as Menu } from 'react-burger-menu'
+import Menu  from 'react-burger-menu/lib/menus/slide'
 import './burger.css';
 configureAnchors({scrollDuration: 600})
 
