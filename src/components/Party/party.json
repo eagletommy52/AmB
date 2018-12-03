@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Josh (p)",
+    "pic": "josh.jpg",
+    "title": "Best Man",
+    "team": "groom",
+    "desc": "Guaranteed to have the best hair at the wedding"
+  },
+  {
+    "name": "Rick",
+    "pic": "rick.jpg",
+    "title": "",
+    "team": "groom",
+    "desc": "Most likely to get picked for the basketball team"
+  },
+  {
+    "name": "Connor",
+    "pic": "connor.jpg",
+    "title": "",
+    "team": "groom",
+    "desc": "Loves rocks, may have smuggled in his own granola"
+  },
+  {
+    "name": "Erik",
+    "pic": "erik.jpg",
+    "title": "",
+    "team": "groom",
+    "desc": "Lovable lumberjack, even if he lacks a soul"
+  },
+  {
+    "name": "Andy",
+    "pic": "andy.jpg",
+    "title": "",
+    "team": "groom",
+    "desc": "Will definitely be dancing in 3D at the reception"
+  },
+  {
+    "name": "Olivia",
+    "pic": "livy.jpg",
+    "title": "Maid of Honor",
+    "team": "bride",
+    "desc": "Plans to channel JT to bring sexy back to the reception"
+  },
+  {
+    "name": "Juliet",
+    "pic": "juliet.jpg",
+    "title": "",
+    "team": "bride",
+    "desc": "Would like Major Tom to know he's really made the grade"
+  },
+  {
+    "name": "Hanna",
+    "pic": "hanna.jpg",
+    "title": "",
+    "team": "bride",
+    "desc": "Strong favorite to win the cutest baby and longest flight awards"
+  },
+  {
+    "name": "Jessie",
+    "pic": "jessie.jpg",
+    "title": "",
+    "team": "bride",
+    "desc": "Most likely to show up dressed as a lion"
+  },
+  {
+    "name": "Alex",
+    "pic": "alex.jpg",
+    "title": "",
+    "team": "bride",
+    "desc": "Instagram celebrity who will be critiquing our beer and cheese selection"
+  }
+]

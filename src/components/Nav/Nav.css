@@ -1,0 +1,29 @@
+.navBar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top:0;
+}
+.sideNav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navBar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.navBar a {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.navBar a:hover {
+  color: #333
+}

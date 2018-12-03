@@ -1,0 +1,33 @@
+.partyContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.groom, .bride {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 15rem;
+}
+.Avatar h4, p{
+  margin: 5px;
+}
+.Avatar p {
+  font-family: Palatino, serif
+}
+.Avatar h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Avatar img {
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+}

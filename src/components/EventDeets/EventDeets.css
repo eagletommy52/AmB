@@ -1,0 +1,102 @@
+.event {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+    "a b"
+    "c d";
+  justify-content: center
+}
+@media (max-width: 600px) {
+  .event {
+    grid-template-columns: 1fr;
+  grid-template-rows: auto;
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    "d";
+  }
+}
+.event img {
+  max-width: 20vw;
+  max-height: 25vh
+}
+.event ul {
+  list-style-position: inside;
+}
+.wedding, .reception, .accomodations, .directions{
+ 
+  text-align: center;
+}
+
+.wedding {
+  grid-area: a;
+}
+.reception {
+  grid-area: b;
+}
+.accommodations {
+  grid-area: c;
+  text-align: center;
+}
+.accommodations ul {
+  text-align: initial;
+  display: inline-block;
+}
+.directions {
+  grid-area: d;
+}
+.airport{
+ border: 1px solid #666;
+ width: 8rem;
+ border-radius: 5px;
+ padding: 5px;
+}
+.airport h4{
+  margin: 8px;
+}
+.airportContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.badge{
+  border-radius: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+  font-size: .875rem;
+  font-weight: 500;
+  display: inline-block;
+  margin: 2px;
+  opacity: 1;
+  transition: opacity .15s ease-in;
+  line-height: .6rem;
+  vertical-align: middle;
+}
+
+.bgGreen{
+  background-color: #28A745;
+  color: #fff;
+}
+.bgRed{
+  background-color: #DC3545;
+  color: #fff;
+}
+.bgYellow{
+  background-color: #FFC107;
+  color: black;
+}
+
+.dim {
+  opacity: 1;
+  transition: opacity .15s ease-in;
+}
+
+.dim:hover, .dim:focus {
+  opacity: .5;
+  transition: opacity .15s ease-in;
+}
