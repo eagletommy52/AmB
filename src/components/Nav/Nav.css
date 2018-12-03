@@ -1,3 +1,14 @@
+#leftBar, #rightBar {
+  display: none;
+}
+@media (min-width: 650px) {
+  #leftBar, #rightBar {
+    display: block;
+  }
+  .ambBurger {
+    display: none;
+  }
+}
 .navBar ul {
   list-style: none;
   display: flex;
@@ -6,6 +17,11 @@
   align-items: center;
   margin-top:0;
 }
+.navBar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
 .sideNav ul {
   list-style: none;
   display: flex;
@@ -14,10 +30,7 @@
   justify-content: center;
   align-items: center;
 }
-.navBar li {
-  display: inline-block;
-  margin: 0 20px;
-}
+
 .navBar a {
   color: black;
   text-decoration: none;
@@ -25,5 +38,48 @@
   font-size: 1.25rem;
 }
 .navBar a:hover {
-  color: #333
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .navBar > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+      "leftBar leftBar rightBar rightbar"
+      ". amb amb ."
+  }
+@media (max-width: 650px) {
+  .navBar > ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "amb"
+  }
+}
+  .navBar li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  #leftBar {
+    grid-area: leftBar;
+    justify-content: flex-end;
+  }
+  #leftBar ul {
+    
+    justify-content: flex-end;
+  }
+  #rightBar {
+    grid-area: rightBar;
+    justify-content: flex-start;
+  }
+  #amb {
+    display: flex;
+    grid-area: amb;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+  }
 }
