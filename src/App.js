@@ -67,9 +67,14 @@ class App extends Component {
           </section>
         </ScrollableAnchor>
         <ScrollableAnchor id={'registry'}>
-          <section style={{"marginBottom": "10vh"}}> 
+          <section className='registryContainer' style={{"marginBottom": "10vh"}}> 
           <h2>Registry</h2>
+          <p>We are so happy that you’ll be able to join us for our wedding.  While the presence of your company is the only gift we could ever ask for, if you'd like to add anything else we are currently saving up for our dream honeymoon in August after the wedding or feel free to browse the registry links below:</p>
           <div class="registry">
+            <a href="https://www.honeyfund.com/wedding/AndrewMarriesBeth">
+            <img alt="Honeyfund" src={require('./images/honeyfund.png')} width="135px"/><br/>
+            Honeyfund
+            </a>
             <a href="https://smile.amazon.com/wedding/share/AndrewMarriesBeth">
             <FontAwesomeIcon size="5x" icon={['fab', 'amazon']}/><br/>
             Amazon
