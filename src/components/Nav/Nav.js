@@ -11,7 +11,7 @@ const Nav = (props) => {
     <div className='navBar'>
       <div class="ambBurger">
         
-        <Menu right>
+        <Menu left>
           <a href='#home' onClick={goToTop()}>Home</a>
           <a href='#event'>Event</a>
           <a href='#story'>Our Story</a>
