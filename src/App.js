@@ -21,9 +21,7 @@ configureAnchors({scrollDuration: 600})
 
 class App extends Component {
   render() {
-    const heroBackground = {
-      height: "1000px",
-      backgroundImage: 'url(http://tinyurl.com/zaz7bp4)'}
+    
     return (
       <div className="App">
         <div className="hero" style={{"height": "100vh"}}>

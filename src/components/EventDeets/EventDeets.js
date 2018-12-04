@@ -1,5 +1,9 @@
 import React from 'react';
 import './EventDeets.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMap } from '@fortawesome/free-solid-svg-icons';
+library.add(faMap)
 
 const airportList = [
   {
@@ -57,11 +61,12 @@ const EventDeets = (props) => {
           </h3>
           <p>
             June 1st, 2019 2:00PM<br />
-            West Point Cadet Chapel<br />
+            <a href="https://www.usma.edu/chaplain/sitepages/cadet%20chapel.aspx">West Point Cadet Chapel</a><br />
             722 Derussy Rd<br /> 
             West Point, NY 10996
           </p>
-          <img src={require('../../images/chapel.jpg')} alt="West Point Cadet Chapel"/>
+          <a href="https://www.usma.edu/chaplain/sitepages/cadet%20chapel.aspx"><img src={require('../../images/chapel.jpg')} alt="West Point Cadet Chapel"/></a>
+          <a href="https://goo.gl/zeGje6"><FontAwesomeIcon size="2x" icon="map" color="#222299" style={{marginTop: '10px'}}/></a>
         </div>
         <div className="reception">
           <h3>
@@ -69,12 +74,13 @@ const EventDeets = (props) => {
           </h3>
           <p>
             Following the ceremony, the cocktail hour & reception will be held at the Thayer Hotel at 4:30pm.<br />
-            Thayer Hotel<br />
+            <a href="https://www.thethayerhotel.com/">Thayer Hotel</a><br />
             674 Thayer Rd<br /> 
             West Point, NY 10996
             
           </p>
-          <img src={require('../../images/thayer.jpg')} alt="Thayer Hotel"/>
+          <a href="https://www.thethayerhotel.com/"><img src={require('../../images/thayer.jpg')} alt="Thayer Hotel"/></a><br/>
+          <a href="https://goo.gl/KnuGrT"><FontAwesomeIcon size="2x" icon="map" color="#222299" style={{marginTop: '10px'}}/></a>
         </div>
         <div className="accommodations">
           <h3>

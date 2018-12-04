@@ -19,6 +19,14 @@
   .hero{
     background-image: url('./images/heroMobile.jpg');}
 }
+@media (max-width: 412px) {
+  .hero {
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 .backToTop {
   width: 100%;
   position: absolute;
