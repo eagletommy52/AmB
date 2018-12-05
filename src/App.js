@@ -9,6 +9,7 @@ import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import Nav from './components/Nav/Nav';
 import EventDeets from './components/EventDeets/EventDeets'
 import Party from './components/Party/Party';
+import Story from './components/Story/Story';
 
 const Sticky = require('sticky-js');
 const sticky = new Sticky('.backToTop');
@@ -94,6 +95,7 @@ class App extends Component {
         <ScrollableAnchor id={'story'}>
           <section style={{"height": "50vh"}}> 
           <h2>Our Story</h2>
+          <Story />
           </section>
         </ScrollableAnchor>  
       </div>

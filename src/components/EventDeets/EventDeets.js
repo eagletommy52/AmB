@@ -117,7 +117,7 @@ const EventDeets = (props) => {
           <p> 
           Guest traveling from out of town will likely want to fly into one of the following airports:<br/><br/>
           <div class="airportContainer">
-            {airportList.map(airport=><Airport Name={airport.Name} Abbr={airport.Abbr} Cost={airport.Cost} Time={airport.Time}/>)}
+            {airportList.map(airport=><Airport key={airport.name} Name={airport.Name} Abbr={airport.Abbr} Cost={airport.Cost} Time={airport.Time}/>)}
           </div>
           <br/>
           From there most guests will rent a car, but the metro north train line can take visitors from the Manhattan to Garrison, the town directly across the Hudson from West Point.

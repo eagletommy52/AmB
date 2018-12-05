@@ -9,7 +9,7 @@ const Nav = (props) => {
   return (
     <ScrollableAnchor id={'home'}>
     <div className='navBar'>
-      <div class="ambBurger">
+      <div className="ambBurger">
         
         <Menu left>
           <a href='#home' onClick={goToTop()}>Home</a>
