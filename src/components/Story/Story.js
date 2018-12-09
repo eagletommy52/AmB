@@ -7,7 +7,6 @@ function Story (props) {
       <div className='story'>
       <img src={require('../../images/story/phones.jpg')} alt="Phones Buzzing" />
         <pre>
-        
           On a warm summer night in June of 15 <br/>
           Two phones buzzed at once as a match lit the screen <br/>
           A cadet and a chemist, what an unlikely match<br/>
@@ -16,12 +15,10 @@ function Story (props) {
           They closed out the night with an ice-creamy treat<br/>
           </pre>
           <img src={require('../../images/story/robots.jpg')} alt="Robot Competition"  /><pre>
-          <br/>
           Before they both knew it they were stealing weekends<br/>
           And by summer's end they were boy and girlfriend<br/>
           </pre>
           <img src={require('../../images/story/gfbf.svg')} alt="Robot Competition"  /><pre>
-          
           But as oft does happen, life whisked them away<br/>
           MB to Wisconsin and Andrew to NJ<br/>
           </pre>
