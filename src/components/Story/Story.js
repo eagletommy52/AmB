@@ -25,10 +25,11 @@ function Story (props) {
           But as oft does happen, life whisked them away<br/>
           MB to Wisconsin and Andrew to NJ<br/>
           </pre>
-          <img src={require('../../images/story/states.svg')} alt="Robot Competition"  /><pre>
+          <img src={require('../../images/story/states.svg')} alt="Robot Competition"  style={{width: '12rem'}} /><pre>
           But like the Grinch before Christmas their love grew tenfold<br/>
           And before either knew it they'd earned Delta Gold<br/>
-          <br/>
+          </pre>
+          <img src={require('../../images/story/gold.svg')} alt="Robot Competition"  style={{width: '15rem'}} /><pre>
           Fast forward the story to the top of Storm King<br/>
           Where Andrew gave MB a promise and ring<br/>
           "I'll love you forever, please give me your hand<br/>
@@ -36,6 +37,7 @@ function Story (props) {
           So join us dear friends at the chapel in June <br/>
           We'll be saying our vows cuz we're over the moon!<br/>
         </pre>
+        <img src={require('../../images/story/westpoint.svg')} alt="Robot Competition"  style={{width: '25rem'}} />
       </div>
   </div>
   )
