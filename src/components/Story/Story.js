@@ -7,7 +7,7 @@ function Story (props) {
       <div className='story'>
       <img src={require('../../images/story/phones.jpg')} alt="Phones Buzzing" />
         <pre>
-          On a warm summer night in June of 15 <br/>
+          On a warm summer night in June of '15 <br/>
           Two phones buzzed at once as a match lit the screen <br/>
           A cadet and a chemist, what an unlikely match<br/>
           Little did they know they'd met quite a catch<br/>
