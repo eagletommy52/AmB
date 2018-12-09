@@ -54,7 +54,6 @@ const EventDeets = (props) => {
     <React.Fragment>
       <h2>Event Details</h2>
       <div className="event">
-              
         <div className="wedding">
           <h3>
             Ceremony
@@ -116,11 +115,13 @@ const EventDeets = (props) => {
           </h3>
           <p> 
           Guest traveling from out of town will likely want to fly into one of the following airports:<br/><br/>
-          <div class="airportContainer">
-            {airportList.map(airport=><Airport key={airport.name} Name={airport.Name} Abbr={airport.Abbr} Cost={airport.Cost} Time={airport.Time}/>)}
+          </p>
+          <div className="airportContainer">
+            {airportList.map(airport=><Airport key={airport.Name} Name={airport.Name} Abbr={airport.Abbr} Cost={airport.Cost} Time={airport.Time}/>)}
           </div>
           <br/>
-          From there most guests will rent a car, but the metro north train line can take visitors from the Manhattan to Garrison, the town directly across the Hudson from West Point.
+          <p>
+            From there most guests will rent a car, but the metro north train line can take visitors from the Manhattan to Garrison, the town directly across the Hudson from West Point.
           </p>
         </div>
       </div>

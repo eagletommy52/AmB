@@ -1,3 +1,14 @@
+.storyContainer {
+  display: flex;
+  justify-content: center;
+}
 .story {
-  display: block;
+  text-align: center;
+}
+.story img {
+  width: 10rem;
+  margin: 0 auto
+}
+.story pre {
+  font-family: Arial, Helvetica, sans-serif
 }
