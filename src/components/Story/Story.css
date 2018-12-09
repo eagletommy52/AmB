@@ -19,6 +19,9 @@
 }
 @media (max-width: 375px) {
   .story pre {
-    margin-left: 5rem;
+    margin-left: 3rem;
+  }
+  .story img {
+    margin-left: 3rem;
   }
 }
