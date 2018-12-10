@@ -63,7 +63,7 @@ class App extends Component {
         <ScrollableAnchor id={'registry'}>
           <section className='registryContainer' style={{"marginBottom": "10vh"}}> 
             <h2>Registry</h2>
-            <p>We are so happy that you’ll be able to join us for our wedding.  While the presence of your company is the only gift we could ever ask for, if you'd like to add anything else we are currently saving up for our dream honeymoon in August after the wedding or feel free to browse the registry links below:</p>
+            <p>We are so happy that you’ll be able to join us for our wedding.  While the presence of your company is the only gift we could ever ask for, if you'd like to add anything else we are currently saving up for our dream honeymoon in August, or feel free to browse the registry links below:</p>
             <div className="registry">
               <a href="https://www.honeyfund.com/wedding/AndrewMarriesBeth">
               <img alt="Honeyfund" src={require('./images/honeyfund.png')} width="135px"/><br/>
@@ -77,7 +77,6 @@ class App extends Component {
               <img alt="Macys" src={require('./images/Macys_logo.svg')} width="200px"/><br/>
               Macys
               </a>
-              
               <a href="http://www.rei.com/GiftRegistryDetails/GR152957214?cm_mmc=gift_reg-_-Wedding-_-announce-_-02Dec2018">
               <img alt="REI" src={require('./images/REI-Logo.png')} width="200px"/><br/>
               REI
