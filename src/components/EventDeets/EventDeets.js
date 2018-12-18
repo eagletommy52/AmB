@@ -89,14 +89,12 @@ const EventDeets = (props) => {
             <a href="https://www.thethayerhotel.com"> Thayer Hotel</a> where the reception will be held.
             <br />
             To reserve, call the Thayer at (845) 446-4731 
-            and ask reserve under the Daub/Thompson block.
+            and ask reserve under the Daub/Thompson block.<br />
+            Additionally we also have a block of rooms at the <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/fort-montgomery/ftmny/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-FTMNY">Holiday Inn Express</a> on Route 9W.  Just use group code DWT when you book for the group rate.
               There are also a number of other hotels, bed & breakfasts and airbnb rentals available in the area
             so we would recommend looking at some of the following locations:
             </p>
             <ul>
-                <li>
-                    <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/fort-montgomery/ftmny/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-FTMNY">Holiday Inn Express</a>
-                </li>
                 <li>
                     <a href="https://www.ihg.com/armyhotels/hotels/us/en/west-point/zywpa/hoteldetail">Five Star Inn</a>
                 </li>
@@ -104,7 +102,7 @@ const EventDeets = (props) => {
                     <a href="https://www.ihg.com/armyhotels/hotels/us/en/west-point/zywpb/hoteldetail">Beat Navy House</a>
                 </li>
                 <li>
-                    <a href="https://www.airbnb.com/s/Highland-Falls--NY-10928--United-States/homes">Highland Falls airbnb Rentals</a>
+                    <a href="https://www.airbnb.com/s/Highland-Falls--NY-10928--United-States/homes?refinement_paths%5B%5D=%2Fhomes&allow_override%5B%5D=&checkin=2019-05-31&checkout=2019-06-02&zoom=13&search_by_map=true&sw_lat=41.31255260650904&sw_lng=-74.00770304674558&ne_lat=41.40837677372244&ne_lng=-73.92873881334714&s_tag=QxuHBZBD">Highland Falls airbnb Rentals</a>
                 </li>
             </ul>
                 
