@@ -89,7 +89,10 @@ const EventDeets = (props) => {
             <a href="https://www.thethayerhotel.com"> Thayer Hotel</a> where the reception will be held.
             <br />
             To reserve, call the Thayer at (845) 446-4731 
-            and ask reserve under the Daub/Thompson block.<br />
+            and ask reserve under the Daub/Thompson block.<br/>
+            Please book your room before April 2nd as the block<br/>
+            will be released to the public after that!
+            <br /><br/>
             A second block of rooms is also reserved at the <br/><a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/fort-montgomery/ftmny/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-FTMNY">Holiday Inn Express</a> on Route 9W.  Just use group code DWT when you book for the group rate.
               There are also a number of other hotels, bed & breakfasts and airbnb rentals available in the area
             so we would recommend looking at some of the following locations:
