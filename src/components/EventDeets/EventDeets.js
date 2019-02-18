@@ -91,7 +91,8 @@ const EventDeets = (props) => {
             To reserve, call the Thayer at (845) 446-4731 
             and ask reserve under the Daub/Thompson block.<br/>
             Please book your room before April 2nd as the block<br/>
-            will be released to the public after that!
+            will be released to the public after that!<br/>
+            If you do have any issues booking in the block be<br/> sure to let Andrew or Mary Beth know and we'll get it fixed!<br/>
             <br /><br/>
             A second block of rooms is also reserved at the <br/><a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/fort-montgomery/ftmny/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-FTMNY">Holiday Inn Express</a> on Route 9W.  Just use group code DWT when you book for the group rate.
               There are also a number of other hotels, bed & breakfasts and airbnb rentals available in the area
