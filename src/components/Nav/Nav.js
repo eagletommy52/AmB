@@ -1,18 +1,17 @@
 import React from 'react';
 import './Nav.css';
-import ScrollableAnchor, { configureAnchors, goToTop } from 'react-scrollable-anchor';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Menu  from 'react-burger-menu/lib/menus/slide'
 import './burger.css';
-configureAnchors({scrollDuration: 600})
 
 const Nav = (props) => {
   return (
-    <ScrollableAnchor id={'home'}>
+    
     <div className='navBar'>
       <div className="ambBurger">
         
         <Menu left>
-          <a href='#home' onClick={goToTop()}>Home</a>
+          <a href='#home'>Home</a>
           <a href='#event'>Event</a>
           <a href='#story'>Our Story</a>
           <a href='#party'>Wedding Party</a>
@@ -23,23 +22,21 @@ const Nav = (props) => {
       <ul className="mainMenu">
         <li id="leftBar">
           <ul className='sideNav'>
-            <li><a href='#home' onClick={goToTop()}>Home</a></li>
-            <li><a href='#event'>Event</a></li>
-            <li><a href='#story'>Our Story</a></li>
+            <li><AnchorLink href='#home'>Home</AnchorLink></li>
+            <li><AnchorLink href='#event'>Event</AnchorLink></li>
+            <li><AnchorLink href='#story'>Our Story</AnchorLink></li>
           </ul>
         </li>
-        <li id="amb"><img src={require('../../images/mbandrew.png')} alt="Mary Beth and Andrew"/></li>
+        <li id="amb"><img src={'../../images/mbandrew.png'} alt="Mary Beth and Andrew"/></li>
         <li id="rightBar">
           <ul className='sideNav'>
-            <li><a href='#party'>Wedding Party</a></li>
-            <li><a href='#gallery'>Gallery</a></li>
-            <li><a href='#registry'>Registry</a></li>
+            <li><AnchorLink href='#party'>Wedding Party</AnchorLink></li>
+            <li><AnchorLink href='#gallery'>Gallery</AnchorLink></li>
+            <li><AnchorLink href='#registry'>Registry</AnchorLink></li>
           </ul>
         </li>
       </ul>
     </div>
-    </ScrollableAnchor>
-
   )
 }
 

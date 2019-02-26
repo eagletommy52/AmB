@@ -64,7 +64,7 @@ const EventDeets = (props) => {
             722 Derussy Rd<br /> 
             West Point, NY 10996
           </p>
-          <a href="https://www.usma.edu/chaplain/sitepages/cadet%20chapel.aspx"><img src={require('../../images/chapel.jpg')} alt="West Point Cadet Chapel"/></a>
+          <a href="https://www.usma.edu/chaplain/sitepages/cadet%20chapel.aspx"><img src='./images/chapel.jpg' alt="West Point Cadet Chapel"/></a>
           <a href="https://goo.gl/zeGje6"><FontAwesomeIcon size="2x" icon="map" color="#333" style={{marginTop: '10px'}}/></a>
         </div>
         <div className="reception">
@@ -78,7 +78,7 @@ const EventDeets = (props) => {
             West Point, NY 10996
             
           </p>
-          <a href="https://www.thethayerhotel.com/"><img src={require('../../images/thayer.jpg')} alt="Thayer Hotel"/></a><br/>
+          <a href="https://www.thethayerhotel.com/"><img src='./images/thayer.jpg' alt="Thayer Hotel"/></a><br/>
           <a href="https://goo.gl/KnuGrT"><FontAwesomeIcon size="2x" icon="map" color="#333" style={{marginTop: '10px'}}/></a>
         </div>
         <div className="accommodations">

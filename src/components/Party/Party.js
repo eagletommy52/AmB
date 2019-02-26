@@ -5,7 +5,7 @@ import partyMembers from './party.json'
 const Avatar = (props) => {
   return (
     <div className="Avatar">
-      <img src={require(`../../images/team/${props.pic}`)} alt={props.name}/>
+      <img src={`../../images/team/${props.pic}`} alt={props.name}/>
       <h4>{props.name}</h4>
       <p>{props.desc}</p>
     </div>
