@@ -4,7 +4,6 @@ import './App.css';
 
 import Main from './Main';
 import Matcher from './components/Matcher/Matcher';
-import RSVPNoCode from './components/RSVPNoCode/RSVPNoCode';
 import RSVP from './components/RSVP/RSVP';
 class App extends Component {
   render() {
