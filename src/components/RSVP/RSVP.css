@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Pinyon+Script:regular&subset=latin,latin-ext');
+/* <link href="https://fonts.googleapis.com/css?family=Amiri|Pinyon+Script" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Special+Elite&text=MyText' rel='stylesheet' type='text/css'> */
+
+.bgHero {
+  background-image: url('../../images/rsvp-hero.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (orientation: portrait) {
+  .bgHero{
+    background-image: url('../../images/rsvp-heroMobile.jpg');}
+}
+@media (max-width: 412px) {
+  .bgHero {
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.rsvpContainer {
+  margin: 5px auto;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,.8);
+  max-width: 500px;
+}
+.rsvpContainer h1 {
+  font-family: 'Pinyon Script', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px auto;
+  margin-top: 40px;
+}
+.rsvpContainer h3 {
+  font-family: Amiri, Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px auto;
+  margin-top: 20px;
+}
+.rsvpContainer h4 {
+  font-family: Amiri, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px auto;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+  margin: 0px auto;
+  font-family: Amiri, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  max-width: 500px;
+}
+.sepBack {
+  margin: 0 auto;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,.7);
+}
+button {
+  margin: 5px auto;
+  display: block;
+  font-family: Amiri, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid black;
+  min-width: 200px;
+}
+.centeredChecks {
+  margin: 0 auto;
+}
+.control {
+  font-size: 18px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  background: #e6e6e6;
+}
+/* Hover and focus states */
+.control:hover input ~ .control__indicator {
+  background: #ccc;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+  background: #257c62;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #70a79e;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+  pointer-events: none;
+  opacity: .6;
+  background: #e6e6e6;
+}
+
+/* Check mark */
+.control__indicator:after {
+  position: absolute;
+  display: none;
+  content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+  top: 5px;
+  left: 10px;
+  width: 5px;
+  height: 16px;
+  transform: rotate(45deg);
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+}
+
+/* Disabled tick colour */
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+
+input[type=text], input[type=phone] {
+  font-family: Amiri, Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: rgba(255,255,255,.4);
+  border-radius: 5px;
+  border-style: solid;
+  border: 1px solid black;
+  padding-left: 5px;
+}
+
+.footerCenter {
+  text-align: center;
+  margin: 5px auto;
+}

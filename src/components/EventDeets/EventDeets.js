@@ -64,7 +64,7 @@ const EventDeets = (props) => {
             722 Derussy Rd<br /> 
             West Point, NY 10996
           </p>
-          <a href="https://www.usma.edu/chaplain/sitepages/cadet%20chapel.aspx"><img src={require('../../images/chapel.jpg')} alt="West Point Cadet Chapel"/></a>
+          <a href="https://www.usma.edu/chaplain/sitepages/cadet%20chapel.aspx"><img src='./images/chapel.jpg' alt="West Point Cadet Chapel"/></a>
           <a href="https://goo.gl/zeGje6"><FontAwesomeIcon size="2x" icon="map" color="#333" style={{marginTop: '10px'}}/></a>
         </div>
         <div className="reception">
@@ -78,7 +78,7 @@ const EventDeets = (props) => {
             West Point, NY 10996
             
           </p>
-          <a href="https://www.thethayerhotel.com/"><img src={require('../../images/thayer.jpg')} alt="Thayer Hotel"/></a><br/>
+          <a href="https://www.thethayerhotel.com/"><img src='./images/thayer.jpg' alt="Thayer Hotel"/></a><br/>
           <a href="https://goo.gl/KnuGrT"><FontAwesomeIcon size="2x" icon="map" color="#333" style={{marginTop: '10px'}}/></a>
         </div>
         <div className="accommodations">
@@ -86,6 +86,7 @@ const EventDeets = (props) => {
             Accommodations
           </h3>
             <p>We have reserved a block under our names at the
+<<<<<<< HEAD
               <a href="https://www.thethayerhotel.com"> Thayer Hotel</a> where the reception will be held.
               <br />
               To reserve, call the Thayer at (845) 446-4731 
@@ -97,6 +98,19 @@ const EventDeets = (props) => {
               A second block of rooms is also reserved at the <br/><a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/fort-montgomery/ftmny/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-FTMNY">Holiday Inn Express</a> on Route 9W.  Just use group code DWT when you book for the group rate.
                 There are also a number of other hotels, bed & breakfasts and airbnb rentals available in the area
               so we would recommend looking at some of the following locations:
+=======
+            <a href="https://www.thethayerhotel.com"> Thayer Hotel</a> where the reception will be held.
+            <br />
+            To reserve, call the Thayer at (845) 446-4731 
+            and ask reserve under the Daub/Thompson block.<br/>
+            Please book your room before April 2nd as the block<br/>
+            will be released to the public after that!<br/>
+            If you do have any issues booking in the block be<br/> sure to let Andrew or Mary Beth know and we'll get it fixed!<br/>
+            <br /><br/>
+            A second block of rooms is also reserved at the <br/><a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/fort-montgomery/ftmny/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-US-_-FTMNY">Holiday Inn Express</a> on Route 9W.  Just use group code DWT when you book for the group rate.
+              There are also a number of other hotels, bed & breakfasts and airbnb rentals available in the area
+            so we would recommend looking at some of the following locations:
+>>>>>>> rsvp
             </p>
             <ul>
                 <li>
