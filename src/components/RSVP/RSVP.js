@@ -7,7 +7,7 @@ import './RSVP.css';
 const getInviteWithCode = code => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`http://localhost:7777/rsvp/retrieveInvite?invite=${code}`, {
+      .get(`https://rsvp.andrewmarriesbeth.com/rsvp/retrieveInvite?invite=${code}`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
         },
@@ -24,7 +24,7 @@ const getInviteWithCode = code => {
 const sendRSVPBack = invite => {
   return new Promise((resolve, reject) => {
     axios
-      .post(`http://localhost:7777/rsvp/respondInvite`, invite, {
+      .post(`https://rsvp.andrewmarriesbeth.com/rsvp/respondInvite`, invite, {
         headers: {
           'Access-Control-Allow-Origin': '*',
         },
