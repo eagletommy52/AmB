@@ -5,6 +5,7 @@ import './App.css';
 import Main from './Main';
 import Matcher from './components/Matcher/Matcher';
 import RSVP from './components/RSVP/RSVP';
+import Dashboard from './components/Dashboard/Dashboard';
 class App extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path='/' component={Main} />
+            <Route path='/dashboard' component={Dashboard} />
             <Route path='/rsvp' component={RSVP} />
             <Route path='/' component={Matcher} />
             <Route path='/whoops'
