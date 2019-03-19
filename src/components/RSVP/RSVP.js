@@ -343,7 +343,7 @@ export class RSVP extends Component {
                   <h3>
                           <form onSubmit={this.handleEmailIssue}>
                               <label for="email">Email:</label><br/><input name="email" type="email" required id="issueEmail" placeholder="Email..."/><br/>
-                              <label for="question">Question:</label><br/><textarea name="question" id="issueMessage" placeholder="Question/Issue..."></textarea><br/>
+                              <label for="question">Question:</label><br/><textarea rows="4" name="question" id="issueMessage" placeholder="Question/Issue..."></textarea><br/>
                               <button>Send!</button><br/>
                               <Link to={`/`}>Back to AndrewMarriesBeth.com</Link>
                           </form>
