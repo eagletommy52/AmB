@@ -158,7 +158,7 @@ export class RSVP extends Component {
     const issueData = `issueEmail=${email.value}&msg=${msg.value}`;
     axios.post(`https://andrewthompson.info/weddingEmail.php`, issueData, {
           headers: {
-            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin': 'https://www.andrewmarriesbeth.com',
           },})
         .then(resp=>{
             email.value = '';
