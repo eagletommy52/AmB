@@ -157,7 +157,7 @@ button {
   border-color: #7b7b7b;
 }
 
-input[type=text], input[type=phone] {
+input[type=text], input[type=phone], input[type=email], textarea {
   font-family: Amiri, Georgia, serif;
   font-size: 1.3rem;
   font-weight: 500;

@@ -150,6 +150,23 @@ export class RSVP extends Component {
           .catch(err => console.log(err))
     );
   };
+  handleEmailIssue = (e) => {
+    e.preventDefault()
+    //console.log(e.target)
+    const email = e.target.querySelector('#issueEmail');
+    const msg = e.target.querySelector('#issueMessage');
+    const issueData = `issueEmail=${email.value}&msg=${msg.value}`;
+    axios.post(`https://andrewthompson.info/weddingEmail.php`, issueData, {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },})
+        .then(resp=>{
+            email.value = '';
+            msg.value = 'Message sent--we\'ll get back to you soon!'
+        }
+        )
+        .catch(err=>{console.log(err)})
+  }
   render() {
     //So below are all the possible card states for initial rsvp landing, accept/send, reject, etc
     return (
@@ -204,7 +221,7 @@ export class RSVP extends Component {
                 <RsvpCard
                   title={'Wonderful!'}
                   body={
-                    <h3>
+                    <><h3>
                       We have reserved {this.state.invite.attendeesAuth} seats for your
                       presence
                       <form onSubmit={this.handleRSVPSubmit}>
@@ -257,7 +274,12 @@ export class RSVP extends Component {
                         </table>
                         <button id='rsvpSubmitButton'>Submit</button>
                       </form>
-                    </h3>
+                      </h3>
+                      <h4>Issues or Questions? (special requests, 
+                      children, etc)<br/>
+                      <Link to={`/rsvp/questissues`}>Click Here!</Link>
+                      </h4>
+                      </>
                   }
                   buttonLinks={[]}
                 />
@@ -305,6 +327,30 @@ export class RSVP extends Component {
                       <button>Back to AndrewMarriesBeth.com</button>
                     </Link>
                   }
+                />
+              );
+            }}
+          />
+        )}
+        {this.state.invite && (
+          <Route
+            path='/rsvp/questissues'
+            render={() => {
+              return (
+                <RsvpCard
+                  title={'Issues or questions?'}
+                  body={
+                  <h3>
+                          <form onSubmit={this.handleEmailIssue}>
+                              <label for="email">Email:</label><br/><input name="email" type="email" required id="issueEmail" placeholder="Email..."/><br/>
+                              <label for="question">Question:</label><br/><textarea name="question" id="issueMessage" placeholder="Question/Issue..."></textarea><br/>
+                              <button>Send!</button><br/>
+                              <Link to={`/`}>Back to AndrewMarriesBeth.com</Link>
+                          </form>
+                  </h3>
+                  }
+                  buttonLinks={[]}
+                  footer={''}
                 />
               );
             }}
