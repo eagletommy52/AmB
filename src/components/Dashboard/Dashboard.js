@@ -41,11 +41,12 @@ export default class Dashboard extends Component {
       [e.target.name]: [e.target.value],
     });
   };
-  handleLogin = e => {
-    let button = document.getElementById('secretButt');
-    button.disabled = true;
+  handleDataFetch = e => {
+    e.target.disabled = true;
+    e.persist();
     getAllWeddingData(this.state.superSecret)
       .then(res => {
+        if(e.target){e.target.disabled = false};
         let rsvpResults = res.reduce(
           (acc, invite) => {
             if (!invite.responded) {
@@ -68,13 +69,14 @@ export default class Dashboard extends Component {
         //console.log(rsvpResults);
       })
       .catch(err => {
-        button.disabled = false;
+        e.target.disabled = false;
         this.setState({
           error: true,
         });
         setTimeout(() => this.setState({ error: false }), 5000);
       });
   };
+  
   render() {
     const rsvpResults = this.state.rsvpResults;
     const [going, declined, nonresponders, totalNum] = rsvpResults;
@@ -94,7 +96,7 @@ export default class Dashboard extends Component {
                 onChange={this.handleSecretInput}
               />
             </div>
-            <button id='secretButt' onClick={this.handleLogin}>
+            <button id='secretButt' onClick={this.handleDataFetch}>
               Submit
             </button>
             {this.state.error ? (
@@ -113,21 +115,25 @@ export default class Dashboard extends Component {
         {rsvpResults && (
           <div className='respondentsContainer'>
             <header className='header'>
-              <h2>Results</h2>
+              <h2>Results <button id='refresh button' onClick={this.handleDataFetch}>Refresh{String.fromCodePoint(0x1F42F)}</button></h2>
               <h3>
                 Respondents: {going.length + declined.length}/{totalNum}
               </h3>
             </header>
 
             <section className='going'>
-              <h2>Responded</h2>
+              <h2>Responded ({going.reduce((acc,invite)=>{return acc+invite.attendees.length},0)}{String.fromCodePoint(0x1F44D)})</h2>
               {going &&
                 going.map(invite => {
                   return <ResponseCard key={invite.code} invite={invite} />;
                 })}
             </section>
             <section className='notgoing'>
-              <h2>Declined</h2>
+              <h2>Declined ({
+                declined.reduce((acc,invite)=>{
+                let coming = invite.attendees.reduce((accum,attendee)=>{
+                  return attendee.attending?accum+1:accum},0)
+                return acc+coming},0)}{String.fromCodePoint(0x1F44D)})</h2>
               {declined &&
                 declined.map(invite => {
                   return <ResponseCard key={invite.code} invite={invite} />;
