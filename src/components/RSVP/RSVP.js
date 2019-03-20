@@ -137,18 +137,19 @@ export class RSVP extends Component {
     });
   };
   handleDeclineRSVP = () => {
-    //console.log('declining....')
+    console.log('declining....')
     this.setState(
       prevState => {
         prevState.invite.attendees.forEach(att => (att.attending = false));
         //console.log(prevState)
         return prevState;
-      },
-      updatedState =>
-        sendRSVPBack(updatedState)
+      }
+    );
+    let turnedDownInvite = Object.assign(this.state.invite)
+    turnedDownInvite.attendees.forEach(att => (att.attending = false));
+    sendRSVPBack(turnedDownInvite)
           .then(this.props.history.push(`/rsvp/decline`))
           .catch(err => console.log(err))
-    );
   };
   handleEmailIssue = (e) => {
     e.preventDefault()
