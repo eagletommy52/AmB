@@ -83,6 +83,9 @@ button {
 .centeredChecks {
   margin: 0 auto;
 }
+td {
+  max-width: 100%;
+}
 .control {
   font-size: 18px;
   position: relative;
@@ -166,9 +169,21 @@ input[type=text], input[type=phone], input[type=email], textarea {
   border-style: solid;
   border: 1px solid black;
   padding-left: 5px;
+  max-width: 100%;
+}
+
+input[type=text], textarea, input[type=email] {
+  width: 85%;
 }
 
 .footerCenter {
   text-align: center;
   margin: 5px auto;
+}
+span {
+  text-align: center;
+}
+.rsvpData {
+  display: grid;
+  grid-template-columns: 20% 80%;
 }

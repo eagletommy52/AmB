@@ -226,18 +226,13 @@ export class RSVP extends Component {
                       We have reserved {this.state.invite.attendeesAuth} seats for your
                       presence
                       <form onSubmit={this.handleRSVPSubmit}>
-                        <table style={{ margin: '0 auto' }}>
-                          <tbody>
-                            <tr>
-                              <td>Attending?</td>
-                              <td>Name</td>
-                            </tr>
+                        <div className="rsvpData">
+                          <span>Attending?</span><span>Name</span>
                             {this.state.invite.attendees.map((person, i) => {
                               return (
-                                <tr key={person._id}>
-                                  <td className='centeredChecks'>
-                                    <label className='control control--checkbox'>
-                                      <input
+                                <>
+                                    <label key={person._id+'check'} className='control control--checkbox'>
+                                      <input 
                                         name={i}
                                         onChange={this.handleCheckChange}
                                         checked={this.state.invite.attendees[i].attending}
@@ -245,22 +240,21 @@ export class RSVP extends Component {
                                       />
                                       <div className='control__indicator' />
                                     </label>
-                                  </td>
-                                  <td>
                                     <input
+                                      key={person._id+'name'}
                                       name={`${i}`}
                                       id={person._id}
                                       onChange={this.handleNameChange}
                                       type='text'
                                       value={this.state.invite.attendees[i].amendedName}
                                     />
-                                  </td>
-                                </tr>
+                                </>
                               );
                             })}
-                            <tr>
-                              <td colSpan='2'>
-                                Phone Number
+                        </div>
+                              
+                              <br/>Phone Number
+                                
                                 <br />
                                 <input
                                   type='phone'
@@ -269,10 +263,7 @@ export class RSVP extends Component {
                                   value={this.state.invite.phone}
                                   id='invitePhone'
                                 />
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                            
                         <button id='rsvpSubmitButton'>Submit</button>
                       </form>
                       </h3>
