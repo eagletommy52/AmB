@@ -31,7 +31,7 @@ const Registry = props => {
           <br />
           Macys
         </a>
-        <a href='http://www.rei.com/GiftRegistryDetails/GR152957214?cm_mmc=gift_reg-_-Wedding-_-announce-_-02Dec2018'>
+        <a href='https://www.myregistry.com/rei/wedding-registry/Andrew-Thompson-and-Mary-Beth-Daub-GREENVILLE-SC/1874971'>
           <img alt='REI' src={'../../images/REI-Logo.png'} width='200px' />
           <br />
           REI
