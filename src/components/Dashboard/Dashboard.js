@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Dashboard.css';
+import ResponseCard from './ResponseCard/ResponseCard'
 const getAllWeddingData = superSecret => {
   return new Promise((resolve, reject) => {
     axios
@@ -9,32 +10,12 @@ const getAllWeddingData = superSecret => {
       .catch(err => reject(err));
   });
 };
-const ResponseCard = props => {
-  const { attendeesAuth, phone, attendees, color } = props.invite;
-  return (
-    <div className='responseCard' style={{ backgroundColor: color }}>
-      <div>
-        {attendees.map((attendee, i, arr) => {
-          return (
-            <div key={attendee._id}>
-              {props.invite.responded&&(attendee.attending?String.fromCodePoint(0x1F44D):String.fromCodePoint(0x1F44E))}{attendee.firstName} {attendee.lastName} {i + 1 === arr.length ? '' : ' &'}
-              <br />
-            </div>
-          );
-        })}
-      </div>
-      <div className="responseData">
-        <div>{phone ? `Phone: ${phone}` : ''}</div>
-        <div><strong>{attendees.reduce((acc, attendee)=>{return acc+attendee.attending},0)}/{attendeesAuth} Attending</strong><br/>From: {props.invite.city}</div>
-      </div>
-    </div>
-  );
-};
 export default class Dashboard extends Component {
   state = {
     superSecret: '',
     rsvpResults: '',
     modifyModal: '',
+    attendeeNumbers: '',
   };
   handleSecretInput = e => {
     this.setState({
@@ -50,22 +31,32 @@ export default class Dashboard extends Component {
         let rsvpResults = res.reduce(
           (acc, invite) => {
             if (!invite.responded) {
-              invite.color = '#FDD';
+              invite.color = '#FFD';
               acc[2].push(invite);
             } else {
-              if (invite.attendees.every(attendee => attendee.attending)) {
+              if (invite.attendees.every(attendee => !attendee.attending)) {
+                invite.color = '#FDD';
+                acc[1].push(invite);
+              } else {
                 invite.color = '#DFD';
                 acc[0].push(invite);
-              } else {
-                invite.color = '#FFD';
-                acc[1].push(invite);
               }
             }
             return acc;
           },
           [[], [], [], res.length]
         );
-        this.setState({ rsvpResults: rsvpResults });
+        let attendeeNumbers = rsvpResults[0].reduce((acc,invite)=>{
+          let coming = invite.attendees.reduce((accum,attendee)=>{
+            return attendee.attending?accum+1:accum},0)
+          let notComing = invite.attendees.reduce((accum,attendee)=>{
+            return attendee.attending?accum:accum+1},0)
+          return [acc[0]+coming, acc[1]+notComing]},[0,0])
+        attendeeNumbers.push(rsvpResults[1].reduce((acc,invite)=>{return acc+invite.attendees.length},0))
+        this.setState({ 
+          rsvpResults,
+          attendeeNumbers
+        });
         //console.log(rsvpResults);
       })
       .catch(err => {
@@ -79,6 +70,8 @@ export default class Dashboard extends Component {
   
   render() {
     const rsvpResults = this.state.rsvpResults;
+    const attendeeNumbers = this.state.attendeeNumbers
+    const [resNumYes,resNumNo, decNumNo] = attendeeNumbers
     const [going, declined, nonresponders, totalNum] = rsvpResults;
     return (
       <div className='dashboard'>
@@ -115,32 +108,32 @@ export default class Dashboard extends Component {
         {rsvpResults && (
           <div className='respondentsContainer'>
             <header className='header'>
-              <h2>Results <button id='refresh button' onClick={this.handleDataFetch}>Refresh{String.fromCodePoint(0x1F42F)}</button></h2>
+              <h2><button id='refresh button' onClick={this.handleDataFetch}>Refresh{String.fromCodePoint(0x1F42F)}</button></h2>
               <h3>
-                Respondents: {going.length + declined.length}/{totalNum}
+                Responded Invites: {going.length + declined.length}/{totalNum}
+                <br/>
+                Number of People Attending: {resNumYes}
+                <br/>
+                Yes/No Rate: {Math.round((resNumYes/(resNumYes+resNumNo+decNumNo))*100)}%
               </h3>
             </header>
 
             <section className='going'>
-              <h2>Responded ({going.reduce((acc,invite)=>{return acc+invite.attendees.length},0)}{String.fromCodePoint(0x1F44D)})</h2>
+              <h2>Responded<br/>({resNumYes}{String.fromCodePoint(0x1F44D)} {resNumNo}{String.fromCodePoint(0x1F44E)})</h2>
               {going &&
                 going.map(invite => {
                   return <ResponseCard key={invite.code} invite={invite} />;
                 })}
             </section>
             <section className='notgoing'>
-              <h2>Declined ({
-                declined.reduce((acc,invite)=>{
-                let coming = invite.attendees.reduce((accum,attendee)=>{
-                  return attendee.attending?accum+1:accum},0)
-                return acc+coming},0)}{String.fromCodePoint(0x1F44D)})</h2>
+              <h2>Declined <br/>({decNumNo}{String.fromCodePoint(0x1F44E)})</h2>
               {declined &&
                 declined.map(invite => {
                   return <ResponseCard key={invite.code} invite={invite} />;
                 })}
             </section>
             <section className='noresponse'>
-              <h2>No Response</h2>
+              <h2>No  <br/>Response</h2>
               {nonresponders &&
                 nonresponders.map(invite => {
                   return <ResponseCard key={invite.code} invite={invite} />;
