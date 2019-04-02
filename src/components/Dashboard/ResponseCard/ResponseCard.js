@@ -8,7 +8,7 @@ const ResponseCard = props => {
         {attendees.map((attendee, i, arr) => {
           return (
             <div key={attendee._id}>
-              {props.invite.responded&&(attendee.attending?String.fromCodePoint(0x1F44D):String.fromCodePoint(0x1F44E))}{attendee.firstName} {attendee.lastName} {i + 1 === arr.length ? '' : ' &'}
+              {props.invite.responded&&(attendee.attending?String.fromCodePoint(0x1F44D):String.fromCodePoint(0x1F44E))}{attendee.amendedName} {i + 1 === arr.length ? '' : ' &'}
               <br />
             </div>
           );
