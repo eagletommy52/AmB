@@ -53,6 +53,7 @@ export default class Dashboard extends Component {
             return attendee.attending?accum:accum+1},0)
           return [acc[0]+coming, acc[1]+notComing]},[0,0])
         attendeeNumbers.push(rsvpResults[1].reduce((acc,invite)=>{return acc+invite.attendees.length},0))
+        attendeeNumbers.push(rsvpResults[2].reduce((acc,invite)=>{return acc+invite.attendees.length},0))
         this.setState({ 
           rsvpResults,
           attendeeNumbers
@@ -71,7 +72,7 @@ export default class Dashboard extends Component {
   render() {
     const rsvpResults = this.state.rsvpResults;
     const attendeeNumbers = this.state.attendeeNumbers
-    const [resNumYes,resNumNo, decNumNo] = attendeeNumbers
+    const [resNumYes,resNumNo, decNumNo, nonNums] = attendeeNumbers
     const [going, declined, nonresponders, totalNum] = rsvpResults;
     return (
       <div className='dashboard'>
@@ -133,7 +134,7 @@ export default class Dashboard extends Component {
                 })}
             </section>
             <section className='noresponse'>
-              <h2>No  <br/>Response</h2>
+              <h2>No Response <br/> ({nonNums}{String.fromCodePoint(0x1F937)})</h2>
               {nonresponders &&
                 nonresponders.map(invite => {
                   return <ResponseCard key={invite.code} invite={invite} />;
