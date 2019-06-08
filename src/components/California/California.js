@@ -62,7 +62,7 @@ export class California extends Component {
           <h1>
           California Reception
           </h1>
-          In celebration of their wedding on June 1st, 2019, Mary Beth and Andrew are having a reception for all their West Coast friends and family in Claremont California on Saturday, July 27th 2019 at the Seaver House, 305 North College Avenue, Claremont, CA.  If you would like to attend, please kindly enter your name(s) and guest count below.<br/>
+          In celebration of their wedding on June 1st, 2019, Mary Beth and Andrew are having a reception for all their West Coast friends and family in at 2:00PM, Saturday, July 27th 2019 at the Seaver House, 305 North College Avenue, Claremont, CA.  If you would like to attend, please kindly enter your name(s) and guest count below.<br/>
           <form>
           Name:<input required name="guestName" id="guestNameInput" type="text" onChange={this.handleInput}/><br/>
           Guests: <input type="number" defaultValue="1" onChange={this.handleInput} min="1" name="count" id="guestCountInput"/><br/>
