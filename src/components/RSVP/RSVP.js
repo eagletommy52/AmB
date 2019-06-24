@@ -244,7 +244,6 @@ export class RSVP extends Component {
                                       key={person._id+'name'}
                                       name={`${i}`}
                                       id={person._id}
-                                      onChange={this.handleNameChange}
                                       type='text'
                                       value={this.state.invite.attendees[i].amendedName}
                                     />

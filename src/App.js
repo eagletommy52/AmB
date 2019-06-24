@@ -6,7 +6,8 @@ import Main from './Main';
 import Matcher from './components/Matcher/Matcher';
 import RSVP from './components/RSVP/RSVP';
 import Dashboard from './components/Dashboard/Dashboard';
-import California from './components/California/California'
+import California from './components/California/California';
+import CaliDash from './components/CaliDash/CaliDash';
 class App extends Component {
   render() {
     return (
@@ -15,6 +16,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Main} />
             <Route path='/dashboard' component={Dashboard} />
+            <Route path='/calidash' component={CaliDash} />
             <Route path='/california' component={California} />
             <Route path='/rsvp' component={RSVP} />
             <Route path='/' component={Matcher} />
